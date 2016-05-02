@@ -4,6 +4,7 @@ directory "/etc/consul.d"
 template "/etc/sysconfig/consul" do
   variables(
     gomaxprocs: node[:consul][:gomaxprocs],
+    options:    node[:consul][:options],
   )
 end
 
@@ -14,7 +15,7 @@ when "redhat"
   if node[:platform_version].to_i >= 7
     include_recipe "./service_systemd"
   else
-    # TODO:
+    include_recipe "./service_initd"
   end
 end
 

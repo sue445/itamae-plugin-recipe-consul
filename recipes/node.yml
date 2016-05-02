@@ -4,3 +4,4 @@ consul:
   bin_dir:    "/usr/local/bin"
   data_dir:   "/tmp/consul"
   gomaxprocs: 2
+  options:    "-server -bootstrap-expect 1"
