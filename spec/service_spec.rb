@@ -4,10 +4,16 @@ describe file("/etc/consul.d") do
 end
 
 describe file("/etc/sysconfig/consul") do
+  let(:sysconfig) do
+    <<-EOS
+GOMAXPROCS=#{node[:consul][:gomaxprocs]}
+OPTIONS="#{node[:consul][:options]}"
+    EOS
+  end
+
   it { should exist }
   it { should be_file }
-  its(:content) { should match /^GOMAXPROCS=#{node[:consul][:gomaxprocs]}$/ }
-  its(:content) { should match /^OPTIONS=#{node[:consul][:options]}$/ }
+  its(:content) { should eq sysconfig }
 end
 
 describe file("/etc/systemd/system/consul.service"), if: node[:platform] == "redhat" && node[:platform_version].to_i >= 7 do
