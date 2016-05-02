@@ -39,7 +39,23 @@ end
 
 case node[:platform]
 when "debian"
-  # TODO:
+  environment_file = "/etc/default/consul"
+
+  template environment_file do
+    variables(
+      gomaxprocs: node[:consul][:gomaxprocs],
+      options:    node[:consul][:options],
+    )
+  end
+
+  if node[:platform_version].to_i >= 8
+    consul_system_script environment_file
+
+    service "consul" do
+      action [:enable, :start]
+    end
+  end
+
 when "redhat"
   environment_file = "/etc/sysconfig/consul"
 

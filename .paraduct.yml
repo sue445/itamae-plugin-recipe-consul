@@ -6,4 +6,5 @@ variables:
   HOST:
     - centos65
     - centos70
+    - debian8
 max_threads: 4
