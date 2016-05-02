@@ -2,7 +2,7 @@
 directory "/etc/consul.d"
 
 # Set systemd script
-define :consul_system_script do
+define :consul_systemd_script do
   environment_file = params[:name]
 
   template "/etc/systemd/system/consul.service" do
@@ -49,7 +49,7 @@ when "debian"
   end
 
   if node[:platform_version].to_i >= 8
-    consul_system_script environment_file
+    consul_systemd_script environment_file
 
     service "consul" do
       action [:enable, :start]
@@ -67,7 +67,7 @@ when "redhat"
   end
 
   if node[:platform_version].to_i >= 7
-    consul_system_script environment_file
+    consul_systemd_script environment_file
   else
     consul_initd_script environment_file
   end
