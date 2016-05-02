@@ -47,6 +47,10 @@ start() {
 
     RETVAL=$?
     [ $RETVAL -eq 0 ] && touch $lockfile
+
+    # wait daemon starting
+    sleep 1
+
     echo
     return $RETVAL
 }
