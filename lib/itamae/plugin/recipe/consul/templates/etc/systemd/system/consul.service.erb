@@ -4,7 +4,7 @@ Requires=network-online.target
 After=network-online.target
 
 [Service]
-EnvironmentFile=-/etc/sysconfig/consul
+EnvironmentFile=-<%= @environment_file %>
 Environment=GOMAXPROCS=2
 Restart=on-failure
 ExecStart=<%= @bin_path %> agent $OPTIONS -config-dir=/etc/consul.d -data-dir=<%= @data_dir %>
