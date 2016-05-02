@@ -1,0 +1,4 @@
+consul:
+  version: "0.6.4"
+  src_dir: "/usr/local/src"
+  bin_dir: "/usr/local/bin"
