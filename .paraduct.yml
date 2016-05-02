@@ -4,5 +4,6 @@ after_script: |-
   vagrant destroy -f $HOST
 variables:
   HOST:
+    - centos65
     - centos70
 max_threads: 4
