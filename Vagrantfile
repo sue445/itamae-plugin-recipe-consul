@@ -22,6 +22,15 @@ Vagrant.configure(2) do |config|
     end
   end
 
+  config.vm.define :centos65 do |c|
+    c.vm.box = "puphpet/centos65-x64"
+    c.vm.provider :digital_ocean do |provider, override|
+      provider.image = "centos-6-5-x64"
+    end
+    c.vm.hostname  = 'itamae-centos65'
+    c.vm.hostname  += "-#{ENV['WERCKER_BUILD_ID']}" if ENV['WERCKER_BUILD_ID']
+  end
+
   config.vm.define :centos70 do |c|
     c.vm.box = "centos/7"
     c.vm.provider :digital_ocean do |provider, override|
