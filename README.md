@@ -79,7 +79,7 @@ bundle exec rake itamae:centos70
 bundle exec rake spec:centos70
 ```
 
-see [Vagrantfile](Vagrantfile) and [Rakefile](Rakefile)
+Avairable hosts are defined in [Vagrantfile](Vagrantfile) and [Rakefile](Rakefile)
 
 ## Contributing
 
@@ -92,4 +92,5 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## Special thanks
 systemd unit file and init.d script
+
 http://qiita.com/yunano/items/7ef5fa5670721de55627
