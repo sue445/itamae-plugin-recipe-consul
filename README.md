@@ -89,3 +89,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sue445
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
+## Special thanks
+systemd unit file and init.d script
+http://qiita.com/yunano/items/7ef5fa5670721de55627
