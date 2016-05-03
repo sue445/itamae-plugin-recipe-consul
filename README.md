@@ -1,8 +1,15 @@
 # Itamae::Plugin::Recipe::Consul
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/itamae/plugin/recipe/consul`. To experiment with that code, run `bin/console` for an interactive prompt.
+Itamae plugin to install [Consul](https://www.consul.io/) with init scripts
 
-TODO: Delete this and the text above, and describe your gem
+[![Dependency Status](https://gemnasium.com/badges/github.com/sue445/itamae-plugin-recipe-consul.svg)](https://gemnasium.com/github.com/sue445/itamae-plugin-recipe-consul)
+
+[![wercker status](https://app.wercker.com/status/1d28d36364b4f79161fc248c6c934072/m/master "wercker status")](https://app.wercker.com/project/bykey/1d28d36364b4f79161fc248c6c934072)
+
+## Supported
+* CentOS 6 (init.d)
+* CentOS 7+ (systemd)
+* Debian 8+ (systemd)
 
 ## Installation
 
@@ -22,7 +29,37 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Recipe
+
+```ruby
+# recipe.rb
+include_recipe "consul"
+```
+
+install Consul executable file and init scritps (systemd or init.d)
+
+### Node
+
+```yml
+# node.yml
+consul:
+  # install consul version (required)
+  version: "0.6.4"
+
+  # path to downloaded zip file (default: "/usr/local/src")
+  src_dir: "/usr/local/src"
+
+  # path to consul executable file (default: "/usr/local/src")
+  bin_dir: "/usr/local/bin"
+
+  # consul agent -data-dir option (default: "/tmp/consul")
+  data_dir: "/tmp/consul"
+
+  # consul agent other options (default: none)
+  options: "-server -bootstrap-expect 1"
+
+  gomaxprocs: 2
+```
 
 ## Development
 
@@ -30,9 +67,22 @@ After checking out the repo, run `bin/setup` to install dependencies. You can al
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
+## Testing
+requirements [Vagrant](https://www.vagrantup.com/)
+
+e.g) test on CentOS 7.0
+
+```sh
+vagrant up centos70
+bundle exec rake itamae:centos70
+bundle exec rake spec:centos70
+```
+
+see [Vagrantfile](Vagrantfile) and [Rakefile](Rakefile)
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/itamae-plugin-recipe-consul.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sue445/itamae-plugin-recipe-consul.
 
 
 ## License
