@@ -1,3 +1,4 @@
+# Setup init.d script or systemd unit
 include_recipe "./definitions"
 
 directory "/etc/consul.d"
