@@ -13,7 +13,7 @@ namespace :spec do
     RSpec::Core::RakeTask.new(host.to_sym) do |t|
       puts "Running tests to #{host} ..."
       ENV["TARGET_HOST"] = host
-      t.pattern = "spec/*_spec.rb"
+      t.pattern = "spec/**/*_spec.rb"
     end
   end
 end

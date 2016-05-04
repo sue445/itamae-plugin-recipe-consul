@@ -1,3 +1,4 @@
+# Download and install consul executable file
 package "unzip"
 
 zip_name = "consul_#{node[:consul][:version]}_linux_amd64.zip"
