@@ -5,8 +5,8 @@ directory "/etc/consul.d"
 
 case node[:platform]
 when "debian"
-  include_recipe "./service_debian"
+  include_recipe "./debian"
 
 when "redhat"
-  include_recipe "./service_centos"
+  include_recipe "./centos"
 end
