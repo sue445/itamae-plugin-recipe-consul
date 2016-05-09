@@ -9,10 +9,12 @@ define :set_consul_systemd_unit do
   environment_file = params[:name]
 
   file environment_file do
+    mode    "644"
     content environment_content
   end
 
   template "/etc/systemd/system/consul.service" do
+    mode "644"
     variables(
       environment_file: environment_file,
       bin_path:         "#{node[:consul][:bin_dir]}/consul",
@@ -33,6 +35,7 @@ define :set_consul_initd_script do
   environment_file = params[:name]
 
   file environment_file do
+    mode    "644"
     content environment_content
   end
 
