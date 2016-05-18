@@ -21,7 +21,6 @@ define :set_consul_systemd_unit do
       data_dir:         node[:consul][:data_dir],
     )
 
-    notifies :run,     "execute[systemctl daemon-reload]"
     notifies :restart, "service[consul]"
   end
 
