@@ -1,4 +1,4 @@
-describe file("#{node[:consul][:src_dir]}/consul_#{node[:consul][:version]}_linux_amd64.zip") do
+describe file("#{node[:consul][:src_dir]}/consul_#{node[:consul][:version]}_#{node[:consul][:platform]}.zip") do
   it { should exist }
   it { should be_file }
 end

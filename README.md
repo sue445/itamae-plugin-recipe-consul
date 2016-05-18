@@ -47,6 +47,9 @@ consul:
   # install consul version (required)
   version: "0.6.4"
 
+  # download zip platform (default: "linux_amd64")
+  platform: "linux_amd64"
+
   # path to downloaded zip file (default: "/usr/local/src")
   src_dir: "/usr/local/src"
 
