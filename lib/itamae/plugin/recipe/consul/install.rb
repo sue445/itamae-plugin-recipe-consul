@@ -1,7 +1,7 @@
 # Download and install consul executable file
 package "unzip"
 
-zip_name = "consul_#{node[:consul][:version]}_linux_amd64.zip"
+zip_name = "consul_#{node[:consul][:version]}_#{node[:consul][:platform]}.zip"
 
 http_request "#{node[:consul][:src_dir]}/#{zip_name}" do
   url "https://releases.hashicorp.com/consul/#{node[:consul][:version]}/#{zip_name}"

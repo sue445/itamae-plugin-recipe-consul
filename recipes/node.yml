@@ -1,5 +1,6 @@
 consul:
   version:    "0.6.4"
+  platform:   "linux_amd64"
   src_dir:    "/usr/local/src"
   bin_dir:    "/usr/local/bin"
   data_dir:   "/tmp/consul"
