@@ -32,12 +32,20 @@ Or install it yourself as:
 
 ### Recipe
 
+Install Consul executable file and init scritps (systemd or init.d)
+
 ```ruby
 # recipe.rb
 include_recipe "consul"
 ```
 
-install Consul executable file and init scritps (systemd or init.d)
+Or `include_recipe` just what you need manually:
+
+```ruby
+include_recipe "consul::setup"
+include_recipe "consul::install"
+include_recipe "consul::service"
+```
 
 ### Node
 
