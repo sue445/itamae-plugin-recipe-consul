@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/sue445/itamae-plugin-recipe-consul/tree/HEAD)
-
-[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.0.beta3...HEAD)
+## [v0.1.0](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.0) (2016-05-18)
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.0.beta3...v0.1.0)
 
 **Merged pull requests:**
 
