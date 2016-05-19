@@ -1,3 +1,3 @@
-include_recipe "./setup"
-include_recipe "./install"
-include_recipe "./service"
+include_recipe "consul::setup"
+include_recipe "consul::install"
+include_recipe "consul::service"
