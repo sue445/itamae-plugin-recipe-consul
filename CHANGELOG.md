@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.1.1](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.1) (2016-05-19)
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.0...v0.1.1)
+
+**Merged pull requests:**
+
+- Refactor: Use absolute path instead of relative path [\#10](https://github.com/sue445/itamae-plugin-recipe-consul/pull/10) ([sue445](https://github.com/sue445))
+- Remove needless systemctl daemon-reload [\#9](https://github.com/sue445/itamae-plugin-recipe-consul/pull/9) ([sue445](https://github.com/sue445))
+
 ## [v0.1.0](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.0) (2016-05-18)
 [Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.0.beta3...v0.1.0)
 
