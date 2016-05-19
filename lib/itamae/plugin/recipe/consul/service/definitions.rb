@@ -23,10 +23,6 @@ define :set_consul_systemd_unit do
 
     notifies :restart, "service[consul]"
   end
-
-  execute "systemctl daemon-reload" do
-    action :nothing
-  end
 end
 
 # Set init.d script
