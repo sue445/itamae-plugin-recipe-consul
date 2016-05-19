@@ -11,6 +11,7 @@ define :set_consul_systemd_unit do
   file environment_file do
     mode    "644"
     content environment_content
+    notifies :restart, "service[consul]"
   end
 
   template "/etc/systemd/system/consul.service" do
@@ -32,6 +33,7 @@ define :set_consul_initd_script do
   file environment_file do
     mode    "644"
     content environment_content
+    notifies :restart, "service[consul]"
   end
 
   template "/etc/init.d/consul" do
