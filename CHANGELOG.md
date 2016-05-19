@@ -1,24 +1,38 @@
 # Change Log
 
+## [v0.1.2](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.2) (2016-05-19)
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.1...v0.1.2)
+
+**Implemented enhancements:**
+
+- Restart consul when environment file is updated [\#12](https://github.com/sue445/itamae-plugin-recipe-consul/pull/12) ([sue445](https://github.com/sue445))
+
+**Merged pull requests:**
+
+- Refactor: Remove unused resource [\#11](https://github.com/sue445/itamae-plugin-recipe-consul/pull/11) ([sue445](https://github.com/sue445))
+
 ## [v0.1.1](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.1) (2016-05-19)
 [Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.0...v0.1.1)
+
+**Implemented enhancements:**
+
+- Remove needless systemctl daemon-reload [\#9](https://github.com/sue445/itamae-plugin-recipe-consul/pull/9) ([sue445](https://github.com/sue445))
 
 **Merged pull requests:**
 
 - Refactor: Use absolute path instead of relative path [\#10](https://github.com/sue445/itamae-plugin-recipe-consul/pull/10) ([sue445](https://github.com/sue445))
-- Remove needless systemctl daemon-reload [\#9](https://github.com/sue445/itamae-plugin-recipe-consul/pull/9) ([sue445](https://github.com/sue445))
 
 ## [v0.1.0](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.0) (2016-05-18)
 [Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.0.beta3...v0.1.0)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Add platform to node [\#8](https://github.com/sue445/itamae-plugin-recipe-consul/pull/8) ([sue445](https://github.com/sue445))
 
 ## [v0.1.0.beta3](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.0.beta3) (2016-05-09)
 [Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.0.beta2...v0.1.0.beta3)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Set mode 644 to file [\#7](https://github.com/sue445/itamae-plugin-recipe-consul/pull/7) ([sue445](https://github.com/sue445))
 
