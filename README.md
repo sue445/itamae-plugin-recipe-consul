@@ -71,6 +71,13 @@ consul:
   options: "-server -bootstrap-expect 1"
 
   gomaxprocs: 2
+
+  # consul service actions when after install (default: enable, start)
+  service_actions:
+    - enable
+    - start
+    # - disable
+    # - stop
 ```
 
 ## Development

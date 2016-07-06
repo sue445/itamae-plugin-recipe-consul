@@ -6,3 +6,6 @@ consul:
   data_dir:   "/tmp/consul"
   gomaxprocs: 2
   options:    "-server -bootstrap-expect 1"
+  service_actions:
+    - enable
+    - start

@@ -15,5 +15,8 @@ node.reverse_merge!(
     bin_dir:    "/usr/local/bin",
     data_dir:   "/tmp/consul",
     gomaxprocs: 2,
+    service_actions: [:enable, :start]
   },
 )
+
+node[:consul][:service_actions] ||= []
