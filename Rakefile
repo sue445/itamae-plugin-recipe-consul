@@ -24,7 +24,7 @@ namespace :itamae do
   HOSTS.each do |host|
     desc "Run itamae to #{host}"
     task host do
-      sh "bundle exec itamae ssh --host=#{host} --vagrant --node-yaml=recipes/node.yml recipes/install.rb"
+      sh "itamae ssh --host=#{host} --vagrant --node-yaml=recipes/node.yml recipes/install.rb"
     end
   end
 end
