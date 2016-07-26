@@ -59,9 +59,7 @@ build:
 
         - script:
             name: paraduct test
-            code: |
-              gem install paraduct
-              paraduct test
+            code: bundle exec paraduct test
 
     after-steps:
         - script:
