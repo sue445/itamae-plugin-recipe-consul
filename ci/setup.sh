@@ -8,3 +8,18 @@ vagrant plugin install vagrant-digitalocean
 # https://github.com/mitchellh/vagrant/blob/v1.8.4/vagrant.gemspec#L23
 gem uninstall bundler --all --force
 gem install bundler -v 1.12.5 --no-document
+
+
+mkdir -m 700 -p $HOME/.ssh
+
+#########################
+# put ssh keys
+set +x
+
+echo -e "$DIGITALOCEAN_KEY_PRIVATE" > $HOME/.ssh/id_rsa.vagrant
+echo -e "$DIGITALOCEAN_KEY_PUBLIC"  > $HOME/.ssh/id_rsa.vagrant.pub
+
+set -x
+#########################
+
+chmod 600 $HOME/.ssh/id_rsa.vagrant
