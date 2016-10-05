@@ -4,6 +4,4 @@ else
   set_consul_initd_script "/etc/sysconfig/consul"
 end
 
-service "consul" do
-  action [:enable, :start]
-end
+include_recipe "consul::service::action"
