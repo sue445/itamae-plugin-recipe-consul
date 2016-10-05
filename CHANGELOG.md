@@ -1,5 +1,19 @@
 # Change Log
 
+## [v0.1.3](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.3) (2016-10-05)
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.3.beta1...v0.1.3)
+
+**Merged pull requests:**
+
+- \[CI\] Migrate to workflow [\#17](https://github.com/sue445/itamae-plugin-recipe-consul/pull/17) ([sue445](https://github.com/sue445))
+- \[CI\] refactor [\#16](https://github.com/sue445/itamae-plugin-recipe-consul/pull/16) ([sue445](https://github.com/sue445))
+- \[CI\] Migrate to container [\#15](https://github.com/sue445/itamae-plugin-recipe-consul/pull/15) ([sue445](https://github.com/sue445))
+- Update box [\#14](https://github.com/sue445/itamae-plugin-recipe-consul/pull/14) ([sue445](https://github.com/sue445))
+- Add service\_actions to node [\#13](https://github.com/sue445/itamae-plugin-recipe-consul/pull/13) ([sue445](https://github.com/sue445))
+
+## [v0.1.3.beta1](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.3.beta1) (2016-07-06)
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.2...v0.1.3.beta1)
+
 ## [v0.1.2](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.2) (2016-05-19)
 [Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.1...v0.1.2)
 
