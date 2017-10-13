@@ -92,9 +92,9 @@ requirements [Vagrant](https://www.vagrantup.com/)
 e.g) test on CentOS 7.0
 
 ```sh
-vagrant up centos70
-bundle exec rake itamae:centos70
-bundle exec rake spec:centos70
+vagrant up centos7
+bundle exec rake itamae:centos7
+bundle exec rake spec:centos7
 ```
 
 Avairable hosts are defined in [Vagrantfile](Vagrantfile) and [Rakefile](Rakefile)
