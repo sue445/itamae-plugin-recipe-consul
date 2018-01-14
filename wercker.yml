@@ -32,20 +32,6 @@ default: &default
 build:
     steps:
 
-build-centos65:
-    <<: *default
-    steps:
-        - script:
-            name: setup
-            code: ./ci/setup.sh
-
-        - bundle-install:
-            jobs: 4
-
-        - script:
-            name: build CentOS 6.5
-            code: ./ci/build.sh centos65
-
 build-centos7:
     <<: *default
     steps:
