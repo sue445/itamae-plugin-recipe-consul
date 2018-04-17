@@ -5,8 +5,6 @@ Itamae plugin to install [Consul](https://www.consul.io/) with init scripts
 [![Gem Version](https://badge.fury.io/rb/itamae-plugin-recipe-consul.svg)](https://badge.fury.io/rb/itamae-plugin-recipe-consul)
 [![Dependency Status](https://gemnasium.com/badges/github.com/sue445/itamae-plugin-recipe-consul.svg)](https://gemnasium.com/github.com/sue445/itamae-plugin-recipe-consul)
 
-[![wercker status](https://app.wercker.com/status/1d28d36364b4f79161fc248c6c934072/m/master "wercker status")](https://app.wercker.com/project/bykey/1d28d36364b4f79161fc248c6c934072)
-
 ## Supported
 * CentOS 6 (init.d)
 * CentOS 7+ (systemd)
