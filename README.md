@@ -87,17 +87,14 @@ After checking out the repo, run `bin/setup` to install dependencies. You can al
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Testing
-requirements [Vagrant](https://www.vagrantup.com/)
+requirements [Docker](https://www.docker.com/)
 
 e.g) test on CentOS 7.0
 
 ```sh
-vagrant up centos7
-bundle exec rake itamae:centos7
-bundle exec rake spec:centos7
+bundle exec itamae docker --node-yaml=recipes/node.yml recipes/install.rb --image=centos:7 --tag itamae-plugin:latest
+DOCKER_IMAGE=itamae-plugin:latest bundle exec rspec
 ```
-
-Avairable hosts are defined in [Vagrantfile](Vagrantfile) and [Rakefile](Rakefile)
 
 ## Contributing
 
