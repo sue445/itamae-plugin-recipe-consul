@@ -3,6 +3,7 @@
 Itamae plugin to install [Consul](https://www.consul.io/) with init scripts
 
 [![Gem Version](https://badge.fury.io/rb/itamae-plugin-recipe-consul.svg)](https://badge.fury.io/rb/itamae-plugin-recipe-consul)
+[![Build Status](https://travis-ci.org/sue445/itamae-plugin-recipe-consul.svg?branch=master)](https://travis-ci.org/sue445/itamae-plugin-recipe-consul)
 [![Dependency Status](https://gemnasium.com/badges/github.com/sue445/itamae-plugin-recipe-consul.svg)](https://gemnasium.com/github.com/sue445/itamae-plugin-recipe-consul)
 
 ## Supported
