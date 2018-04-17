@@ -91,8 +91,9 @@ requirements [Docker](https://www.docker.com/)
 e.g) test on CentOS 7.0
 
 ```sh
-bundle exec itamae docker --node-yaml=recipes/node.yml recipes/install.rb --image=centos:7 --tag itamae-plugin:latest
-DOCKER_IMAGE=itamae-plugin:latest bundle exec rspec
+docker run --privileged -d --name container-with-service centos:7 /sbin/init
+bundle exec itamae docker --node-yaml=recipes/node.yml recipes/install.rb --container=container-with-service --tag itamae-plugin:latest
+DOCKER_CONTAINER=container-with-service bundle exec rspec
 ```
 
 ## Contributing

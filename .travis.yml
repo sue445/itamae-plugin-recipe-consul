@@ -12,9 +12,11 @@ cache: bundler
 before_install:
 - gem update --system --no-document
 - gem install bundler --no-document
+before_script:
+- docker run --privileged -d --name container-with-service $IMAGE /sbin/init
 script:
-- bundle exec itamae docker --node-yaml=recipes/node.yml recipes/install.rb --image=$IMAGE --tag itamae-plugin:latest
-- DOCKER_IMAGE=itamae-plugin:latest bundle exec rspec
+- bundle exec itamae docker --node-yaml=recipes/node.yml recipes/install.rb --container=container-with-service --tag itamae-plugin:latest
+- DOCKER_CONTAINER=container-with-service bundle exec rspec
 branches:
   only:
   - master
