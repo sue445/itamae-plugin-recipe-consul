@@ -1,0 +1,26 @@
+language: ruby
+sudo: required
+services:
+- docker
+rvm:
+- 2.3
+env:
+- IMAGE=centos:7
+- IMAGE=debian:jessie
+bundler_args: "--jobs=4"
+cache: bundler
+before_install:
+- gem update --system --no-document
+- gem install bundler --no-document
+before_script:
+- docker run --privileged -d --name container-with-service $IMAGE /sbin/init
+script:
+- bundle exec itamae docker --node-yaml=recipes/node.yml recipes/install.rb --container=container-with-service --tag itamae-plugin:latest
+- DOCKER_CONTAINER=container-with-service bundle exec rspec
+branches:
+  only:
+  - master
+notifications:
+  email: false
+  slack:
+    secure: M93HeWW+fQk+PrzI2mdtnlVkpiMVfQcfujFXl76ly0EtLS3V9p5KKHSyduQ2t7j/KOoRVF+86sEdPZJg16Ha+Y9pVE2oAs7SMv57rT9HaoQtzf5kZo64eCy63+iV+jUZ4U+NitrtNM1vELKyOsSgAq/KJblq9U67Wto3lOsRec7rskwlkjRwqV4TQElqbA1h4oyWyQG0SMKNnmKYV6TFC0/UNjnYLkxNY3btcOB/PYURxfcwbZk9IU+7id2MM4uG8cBVGSjqOglYOWdpWxTCJpZ6YQGdmXsICa38D/Y3crEHLcUAE4DkaPHpTSVdjVm0kvQlUDuLOmHe+Eh4lm6zy8NCMpyO80/C74/OQQdQgDkohKFI8RX/BZnKdQAmZZf8cIdfe4pF4cZGB8mzGcBcpSBApQHEXZyuJF5u9clNW6+Cdo8jtps0c7Nqg3NWebpUCqwiTVR95Dr820sO6wtIlqlNB5AaNpHzefFoxd42pRm5+Ua9rDuoDuRyhVuWcUQCOn9ScqjhsY9q1UIRbgF03ILgDFmFTu/ClaJ7tOtAtE9n7IsibNf87o2Lz+rNQUrIzIZUo7vElrCub0RhgZFy9+sfplHyIR5CBD4y/9Ca6KoB06vzyb3Y7ElXwIifwbGQ3EQZdAWV6V7slVP83+ahHD+K0E+EPLzAqaDum0MkeqI=

@@ -3,9 +3,8 @@
 Itamae plugin to install [Consul](https://www.consul.io/) with init scripts
 
 [![Gem Version](https://badge.fury.io/rb/itamae-plugin-recipe-consul.svg)](https://badge.fury.io/rb/itamae-plugin-recipe-consul)
+[![Build Status](https://travis-ci.org/sue445/itamae-plugin-recipe-consul.svg?branch=master)](https://travis-ci.org/sue445/itamae-plugin-recipe-consul)
 [![Dependency Status](https://gemnasium.com/badges/github.com/sue445/itamae-plugin-recipe-consul.svg)](https://gemnasium.com/github.com/sue445/itamae-plugin-recipe-consul)
-
-[![wercker status](https://app.wercker.com/status/1d28d36364b4f79161fc248c6c934072/m/master "wercker status")](https://app.wercker.com/project/bykey/1d28d36364b4f79161fc248c6c934072)
 
 ## Supported
 * CentOS 6 (init.d)
@@ -87,17 +86,15 @@ After checking out the repo, run `bin/setup` to install dependencies. You can al
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Testing
-requirements [Vagrant](https://www.vagrantup.com/)
+requirements [Docker](https://www.docker.com/)
 
 e.g) test on CentOS 7.0
 
 ```sh
-vagrant up centos7
-bundle exec rake itamae:centos7
-bundle exec rake spec:centos7
+docker run --privileged -d --name container-with-service centos:7 /sbin/init
+bundle exec itamae docker --node-yaml=recipes/node.yml recipes/install.rb --container=container-with-service --tag itamae-plugin:latest
+DOCKER_CONTAINER=container-with-service bundle exec rspec
 ```
-
-Avairable hosts are defined in [Vagrantfile](Vagrantfile) and [Rakefile](Rakefile)
 
 ## Contributing
 
