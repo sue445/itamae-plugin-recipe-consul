@@ -1,5 +1,18 @@
 # Change Log
 
+## [v0.1.4](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.4) (2019-03-29)
+
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.3...v0.1.4)
+
+**Merged pull requests:**
+
+- Added unzip option to overwrite consul binary [\#23](https://github.com/sue445/itamae-plugin-recipe-consul/pull/23) ([varusan](https://github.com/varusan))
+- Fix CI for bundler v2 [\#22](https://github.com/sue445/itamae-plugin-recipe-consul/pull/22) ([sue445](https://github.com/sue445))
+- Dockerlize [\#21](https://github.com/sue445/itamae-plugin-recipe-consul/pull/21) ([sue445](https://github.com/sue445))
+- Drop CentOS 6.5 [\#20](https://github.com/sue445/itamae-plugin-recipe-consul/pull/20) ([sue445](https://github.com/sue445))
+- centos70 -\> 7 [\#19](https://github.com/sue445/itamae-plugin-recipe-consul/pull/19) ([sue445](https://github.com/sue445))
+- Update CI image [\#18](https://github.com/sue445/itamae-plugin-recipe-consul/pull/18) ([sue445](https://github.com/sue445))
+
 ## [v0.1.3](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.3) (2016-10-05)
 [Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.3.beta1...v0.1.3)
 
