@@ -112,7 +112,7 @@ jobs:
         uses: homoluctus/slatify@v2.0.0
         if: "! success()"
         with:
-          job_name: ${{ format('*build* ({0})', matrix.ruby) }}
+          job_name: ${{ format('*build* ({0}, {1})', matrix.ruby, matrix.image) }}
           type: ${{ job.status }}
           icon_emoji: ":octocat:"
           url: ${{ secrets.SLACK_WEBHOOK }}
