@@ -19,7 +19,7 @@ jobs:
 
       matrix:
         ruby:
-          - ruby:2.3
+          - circleci/ruby:2.3
         image:
           - centos:7
           - debian:jessie
