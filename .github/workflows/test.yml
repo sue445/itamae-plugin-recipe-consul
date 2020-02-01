@@ -24,6 +24,7 @@ jobs:
           - debian:jessie
           - debian:stretch
           - debian:buster
+          - amazonlinux:2
 
     steps:
       - uses: actions/checkout@v2
