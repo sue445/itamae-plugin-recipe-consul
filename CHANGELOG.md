@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.1.5](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.5) (2021-11-20)
+
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.4...v0.1.5)
+
+* Enable MFA requirement for gem releasing
+  * https://github.com/sue445/itamae-plugin-recipe-consul/pull/38
+
 ## [v0.1.4](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.4) (2019-03-29)
 
 [Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.3...v0.1.4)
