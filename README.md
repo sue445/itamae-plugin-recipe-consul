@@ -6,9 +6,8 @@ Itamae plugin to install [Consul](https://www.consul.io/) with init scripts
 [![Build Status](https://github.com/sue445/itamae-plugin-recipe-consul/workflows/test/badge.svg?branch=master)](https://github.com/sue445/itamae-plugin-recipe-consul/actions?query=workflow%3Atest)
 
 ## Supported
-* CentOS 6 (init.d)
 * CentOS 7+ (systemd)
-* Debian 8+ (systemd)
+* Debian 9+ (systemd)
 
 ## Installation
 
