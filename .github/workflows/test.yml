@@ -23,7 +23,6 @@ jobs:
         ruby:
           - "2.3"
         image:
-          - centos:7
           - debian:buster
 
     steps:
@@ -45,9 +44,6 @@ jobs:
             docker run --name tmp-debian $IMAGE bash -c "apt-get update && apt-get install -y systemd-sysv"
             docker commit tmp-debian debian-with-systemd
             docker run --privileged -d --name container-with-service debian-with-systemd /sbin/init
-            ;;
-          *)
-            docker run --privileged -d --name container-with-service $IMAGE /sbin/init
             ;;
           esac
         env:
