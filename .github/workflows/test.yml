@@ -24,7 +24,6 @@ jobs:
           - "2.3"
         image:
           - centos:7
-          - debian:stretch
           - debian:buster
 
     steps:

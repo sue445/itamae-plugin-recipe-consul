@@ -7,7 +7,7 @@ Itamae plugin to install [Consul](https://www.consul.io/) with init scripts
 
 ## Supported
 * CentOS 7+ (systemd)
-* Debian 9+ (systemd)
+* Debian 10+ (systemd)
 
 ## Installation
 
