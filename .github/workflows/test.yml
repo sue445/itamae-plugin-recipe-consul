@@ -23,7 +23,8 @@ jobs:
         ruby:
           - "2.3"
         image:
-          - debian:buster
+          - debian:bullseye
+          - debian:bookworm
 
     steps:
       - uses: actions/checkout@v4
@@ -40,7 +41,7 @@ jobs:
           set -xe
 
           case "$IMAGE" in
-          "debian:stretch" | "debian:buster" )
+          "debian:"* )
             docker run --name tmp-debian $IMAGE bash -c "apt-get update && apt-get install -y systemd-sysv"
             docker commit tmp-debian debian-with-systemd
             docker run --privileged -d --name container-with-service debian-with-systemd /sbin/init
