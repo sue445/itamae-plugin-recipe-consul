@@ -23,7 +23,6 @@ jobs:
         ruby:
           - "2.3"
         image:
-          - debian:buster
           - debian:bullseye
           - debian:bookworm
 
