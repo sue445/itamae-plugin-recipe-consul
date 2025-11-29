@@ -1,4 +1,13 @@
 # Change Log
+## Unreleased
+[full changelog](http://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.6...master)
+
+## [v0.1.6](https://github.com/sue445/itamae-plugin-recipe-consul/releases/tag/v0.1.6) (2025-11-29)
+
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.5...v0.1.6)
+
+* Release gem from GitHub Actions
+  * https://github.com/sue445/itamae-plugin-recipe-consul/pull/48
 
 ## [v0.1.5](https://github.com/sue445/itamae-plugin-recipe-consul/tree/v0.1.5) (2021-11-20)
 
