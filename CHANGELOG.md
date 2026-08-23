@@ -1,6 +1,12 @@
 # Change Log
 ## Unreleased
-[full changelog](http://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.6...master)
+[full changelog](http://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.7...master)
+
+## [v0.1.7](https://github.com/sue445/itamae-plugin-recipe-consul/releases/tag/v0.1.7) (2026-08-23)
+[Full Changelog](https://github.com/sue445/itamae-plugin-recipe-consul/compare/v0.1.6...v0.1.7)
+
+* Migrate release_gem workflow to sue445/workflows (Also testing the gem release)
+  * https://github.com/sue445/itamae-plugin-recipe-consul/pull/82
 
 ## [v0.1.6](https://github.com/sue445/itamae-plugin-recipe-consul/releases/tag/v0.1.6) (2025-11-29)
 
