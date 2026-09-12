@@ -23,7 +23,6 @@ jobs:
         ruby:
           - "2.3"
         image:
-          - debian:bullseye
           - debian:bookworm
 
     steps:
